@@ -35,8 +35,8 @@ class JianshuHotSpider(CrawlSpider):
         pass
 
     def parse_item(self, response):
-        title = response.xpath('//h1[@class="title"]/text()').extract()[0]
-        body = response.xpath('//div[@class="show-content"]').extract()[0]
+        title = response.xpath('//a[@class="title"]/text()').extract()[0]
+        body = response.xpath('//p[@class="abstract"]').extract()[0]
         attr = response.xpath('//script[@data-name="note"]/text()').extract()
         images = response.xpath('//div[@class="image-package"]/img/@src').extract()
         notes = json.loads(attr[0].strip())
