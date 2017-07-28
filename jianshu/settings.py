@@ -22,7 +22,7 @@ BLOCK_LIST = (
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'jianshu (+http://www.yourdomain.com)'
+USER_AGENT = 'Mozilla/5.0 (Windows NT 6.1; rv:20.0) Gecko/20100101 Firefox/20.0'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS=32
@@ -30,7 +30,8 @@ BLOCK_LIST = (
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-#DOWNLOAD_DELAY=3
+CONCURRENT_REQUESTS_PER_DOMAIN = 1
+DOWNLOAD_DELAY=3
 DOWNLOAD_DELAY=1
 RANDOMIZE_DOWNLOAD_DELAY = True
 # The download delay setting will honor only one of:
